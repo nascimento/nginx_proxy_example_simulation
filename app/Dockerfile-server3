@@ -1,0 +1,8 @@
+FROM ruby:2.3.3
+
+COPY Gemfile* .
+RUN bundle install
+
+COPY sinatra-server3.rb app.rb
+
+CMD ["ruby", "app.rb"]
